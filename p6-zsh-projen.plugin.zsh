@@ -15,6 +15,9 @@ alias pjD='pj destroy'
 
 alias pjU='pj projen:upgrade'
 
+alias pja='pj && pjb && pjdd && pjd'
+alias pjA='pjD && pja'
+
 ######################################################################
 #<
 #
@@ -25,25 +28,3 @@ alias pjU='pj projen:upgrade'
 pj_install() {
   npm install -g projen
 }
-
-# Autocompletion
-_projen_completion() {
-  local completions
-  completions=$(projen --completion "${words[@]}")
-  reply=("${(ps:\n:)completions}")
-}
-compctl -K _projen_completion projen
-
-# Initialize plugin
-if (( $+commands[projen] )); then
-  # If the completion file does not exist, generate it and then source it
-  # Otherwise, source it and regenerate in the background
-  if [[ ! -f "$ZSH_CACHE_DIR/completions/_projen" ]]; then
-    projen --completion=zsh > "$ZSH_CACHE_DIR/completions/_projen"
-    source "$ZSH_CACHE_DIR/completions/_projen"
-  else
-    source "$ZSH_CACHE_DIR/completions/_projen"
-    (projen --completion=zsh > "$ZSH_CACHE_DIR/completions/_projen") &!
-  fi
-fi
-
