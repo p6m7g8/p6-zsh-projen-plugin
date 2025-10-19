@@ -1,16 +1,20 @@
-# p6-zsh-projen-plugin
+# P6's POSIX.2 p6-zsh-projen-plugin
 
 ## Table of Contents
 
 ### p6-zsh-projen-plugin
 
-- [p6-zsh-projen-plugin](#p6-zsh-projen-plugin)
-  - [Badges](#badges)
+- [P6's POSIX.2 p6-zsh-projen-plugin](#p6s-posix2-p6-zsh-projen-plugin)
+  - [Table of Contents](#table-of-contents)
+    - [p6-zsh-projen-plugin](#p6-zsh-projen-plugin)
+    - [Badges](#badges)
   - [Summary](#summary)
   - [Contributing](#contributing)
   - [Code of Conduct](#code-of-conduct)
   - [Changes](#changes)
-    - [Usage](#usage)
+  - [Usage](#usage)
+    - [Aliases](#aliases)
+    - [Convenience Functions](#convenience-functions)
   - [Author](#author)
 
 ### Badges
@@ -20,7 +24,7 @@
 
 ## Summary
 
-This plugin provides some aliases for [projen](https://github.com/projen/projen) 
+This plugin provides some aliases for [projen](https://github.com/projen/projen)
 
 [Awesome List](https://github.com/p6m7g8/awesome-projen)
 
@@ -54,10 +58,9 @@ This plugin provides some aliases for [projen](https://github.com/projen/projen)
 
 - alias pjU='pj projen:upgrade'
 
-### Convience Functions
+### Convenience Functions
 
 - pj_install
-
 
 ## Author
 
